@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя Визуализация Графа</title>
+    <style>
+        /* Основные стили страницы */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        /* Заголовок и статус */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 25px;
+        }
+
+        h1 {
+            color: #2d3436;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .status-badge {
+            background-color: #00b894;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 184, 148, 0.3);
+        }
+
+        /* Карточки с информацией */
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #6c5ce7;
+        }
+
+        .info-card h3 {
+            color: #6c5ce7;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .info-card p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Ссылка на сайт */
+        .site-link {
+            display: block;
+            background-color: #e3f2fd;
+            border: 2px dashed #1976d2;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 25px 0;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.2em;
+            color: #0d47a1;
+            text-decoration: none;
+            word-break: break-all;
+            transition: all 0.3s ease;
+        }
+
+        .site-link:hover {
+            background-color: #bbdefb;
+            border-style: solid;
+            transform: translateY(-3px);
+        }
+
+        /* Список следующих шагов */
+        .steps {
+            background-color: #fff8e1;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .steps h3 {
+            color: #ff8f00;
+            margin-bottom: 20px;
+        }
+
+        .steps ol {
+            padding-left: 25px;
+        }
+
+        .steps li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        /* Подвал */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>✅ Граф Островского</h1>
+            <div class="status-badge">САЙТ АКТИВЕН НА GITHUB PAGES</div>
+            <p>Ваша интерактивная визуализация графа успешно опубликована в интернете.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>📍 Адрес вашего сайта</h3>
+            <p>Скопируйте эту ссылку, чтобы открыть сайт или отправить преподавателю:</p>
+            <a href="#" id="dynamic-link" class="site-link">Загрузка адреса...</a>
+            <p><small>Если ссылка не работает сразу, дайте GitHub 2-3 минуты на завершение публикации.</small></p>
+        </div>
+
+        <div class="info-card">
+            <h3>📁 Что уже готово?</h3>
+            <p>• ✅ Репозиторий создан и настроен</p>
+            <p>• ✅ GitHub Pages активирован</p>
+            <p>• ✅ Главная страница (<code>index.html</code>) создана</p>
+            <p>• ✅ Сайт доступен по постоянному адресу</p>
+        </div>
+
+        <div class="steps">
+            <h3>📝 Следующие шаги для завершения работы</h3>
+            <ol>
+                <li><strong>Загрузите файлы графа</strong>: через "Upload files" добавьте <code>graph.json</code> и <code>config.json</code>.</li>
+                <li><strong>Загрузите папку network</strong>: если у вас есть скрипты и стили, загрузите папку целиком.</li>
+                <li><strong>Обновите страницу</strong>: после загрузки файлов сайт автоматически обновится.</li>
+                <li><strong>Проверьте визуализацию</strong>: откройте ссылку выше и убедитесь, что граф отображается.</li>
+                <li><strong>Сдайте работу</strong>: отправьте ссылку на сайт преподавателю.</li>
+            </ol>
+        </div>
+
+        <div class="footer">
+            <p>Сайт создан с помощью GitHub Pages • Автоматически сгенерированная страница</p>
+            <p>Для замены этого текста на вашу визуализацию загрузите файлы проекта.</p>
+        </div>
+    </div>
+
+    <script>
+        // Автоматическое определение и вставка ссылки на сайт
+        window.onload = function() {
+            const repoName = window.location.pathname.split('/')[2]; // Пробуем получить имя репозитория из URL
+            const userName = 'kupchenko-irina'; // Укажите ваш логин
+            let siteUrl;
+
+            if (repoName) {
+                // Если удалось получить имя репозитория
+                siteUrl = `https://${userName}.github.io/${repoName}/`;
+            } else {
+                // Иначе используем стандартный формат
+                siteUrl = `https://${userName}.github.io/ВАШ_РЕПОЗИТОРИЙ/`;
+            }
+
+            // Вставляем ссылку в текст и делаем её кликабельной
+            const linkElement = document.getElementById('dynamic-link');
+            linkElement.textContent = siteUrl;
+            linkElement.href = siteUrl;
+
+            // Небольшая анимация для статуса
+            const badge = document.querySelector('.status-badge');
+            setInterval(() => {
+                badge.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    badge.style.transform = 'scale(1)';
+                }, 300);
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
